@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "drover";
+  src: url(drover.ttf) format('truetype');
+}
+@font-face {
+  font-family: "phoenix";
+  src: url(Phoenix\ Gaming.ttf) format('truetype');
+}
+h2{
+  font-family: "phoenix";
+}
+h1{
+  font-family: "drover";
+}
+body{
+    background-image: url(hexagon.jpg);
+}
+.head{
+  background-image: linear-gradient(
+      to bottom right,
+      rgb(35, 58, 188),
+      rgb(70, 119, 214),
+      rgb(126, 214, 236),
+      rgb(127, 215, 235),
+      rgb(17, 136, 160)
+    );
+    height: 1200px;
+
+  }
+#About{
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(35, 58, 188),
+        rgb(70, 119, 214),
+        rgb(126, 214, 236),
+        rgb(127, 215, 235),
+        rgb(17, 136, 160)
+      );
+      height:fit-content;
+      margin: 50px;
+      padding:10px ;
+      border-radius: 5%;
+    }
+    
+      /* #card-header-about{
+        height: visualviewport;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 2s ease-in-out;
+      } */
+#Achievements{
+      background-image: linear-gradient(
+          to bottom right,
+          rgb(35, 58, 188),
+          rgb(70, 119, 214),
+          rgb(126, 214, 236),
+          rgb(127, 215, 235),
+          rgb(17, 136, 160)
+        );
+        height:700px;
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding:10px ;
+        border-radius: 5%;
+      }
+#Players{
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(35, 58, 188),
+            rgb(70, 119, 214),
+            rgb(126, 214, 236),
+            rgb(127, 215, 235),
+            rgb(17, 136, 160)
+          );
+          height:700px;
+          margin-top: 50px;
+          margin-left: 10px;
+          margin-right: 10px;
+          padding:10px ;
+          border-radius: 5%;
+        }
+ #contact{
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(35, 58, 188),
+            rgb(70, 119, 214),
+            rgb(126, 214, 236),
+            rgb(127, 215, 235),
+            rgb(17, 136, 160)
+          );
+          height:500px;
+          margin-top: 50px;
+          margin-bottom: 10px;
+          margin-left: 10px;
+          margin-right: 10px;
+          padding:10px ;
+          border-radius: 5%;
+        }
+header{
+    display: flex;
+}
+.logo{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    float: right;
+}
+#logo-element-picture{
+  height: 500px;
+  width: 400px;
+  position: relative;
+  float: right;
+  padding-right: 20px;
+}
+#logo-element-pic{
+  height: 400px;
+  width: 300px;
+  position: relative;
+  float: right;
+}
+#motto{
+  margin-top: 65px;
+  position: relative;
+  float: left;
+  color: black;
+  font-weight: 1000px;
+  letter-spacing: 1.8px;
+  word-spacing: 8px;
+}
+#motto-element-team{
+  font-size: 100px;
+  margin-bottom: 50px;
+}
+h1{
+  text-align: center;
+}
+.card{
+  background-color: transparent ;
+}
+#navbar{
+  background-color: transparent;
+  padding: 20px;
+  
+}
+.nav-item-heading{
+  font-size: 40px;
+  margin-right: 20px;
+  align-content: center;
+  font-weight: bold;
+  transition-duration: 2s;
+}
+.nav-item-heading:hover{
+  font-size: 50px;
+  margin-right: 30px;
+  align-content: center;
+  font-weight: bold;
+  transition-duration: 2s;
+}
+.para{
+  position: relative;
+  float:inline-start;
+  color: black;
+}
+.btn{
+  color: bisque;
+  background-color: black;
+  border-radius: 35px;
+}
+#logomotto{
+  height: 700px;
+  margin-top: 100px;
+}
+.card-header{
+  color: black;
+  font-size: 72px;
+
+}

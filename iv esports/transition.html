@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition to Face Mouse Pointer</title>
+  <style>
+    .container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">>>>>>
+    </div>
+  </div>
+
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const box = document.querySelector('.box');
+    
+    document.addEventListener('mousemove', function(e) {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      
+      const boxX = box.offsetLeft + (box.offsetWidth / 2);
+      const boxY = box.offsetTop + (box.offsetHeight / 2);
+      
+      const angle = Math.atan2(mouseY - boxY, mouseX - boxX);
+      const angleDeg = angle * (180 / Math.PI);
+      
+      box.style.transform = `translate(-50%, -50%) rotate(${angleDeg}deg)`;
+    });
+  });
+  </script>
+</body>
+</html>

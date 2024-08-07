@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 1000px;
+    }
+    /* Modal styles */
+.btnmodal{
+  text-align: center;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 800px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modalbtn{
+  background-color:rgb(187, 61, 11);
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+.modalbtn:hover {
+  background-color:  rgb(228, 82, 25);
+}
+#ifrm{
+    height: 600px;
+    display: block;
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+   <!-- Button to open first modal -->
+   <button class="modalbtn" onclick="openModal('modal1')">KDT Pharmacology</button>
+   <!-- First Modal -->
+     <div id="modal1" class="modal">
+       <div class="modal-content">
+            <div id="viewer" style="width: 100%; height: 600px;">
+                <iframe id="ifrm" src="https://drive.google.com/file/d/1NHrm7g-JRKfMu1BaKhiIQhvKNbDjoB_X/preview"></iframe>
+            </div>
+             <div class="btnmodal">
+               <button class="modalbtn" onclick="closeModal('modal1')">Close</button>
+             </div>
+       </div>
+     </div>
+  <script>
+    // Function to open a modal
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+}
+
+// Function to close a modal
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
+
+// Close the modal when clicked outside of it
+window.onclick = function(event) {
+    var modals = document.getElementsByClassName('modal');
+    for (var i = 0; i < modals.length; i++) {
+        var modal = modals[i];
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+  </script>
+</body>
+</html>
+</body>
+</html>

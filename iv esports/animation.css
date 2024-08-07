@@ -1,0 +1,30 @@
+#div1{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: repeating-radial-gradient(red, red 10px, blue 10px, blue 20px);
+    animation: rotate 5s infinite;
+    animation: size 5s infinite;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate('0deg');
+    }
+    100%{
+        transform: rotate('360deg');
+    }
+}
+@keyframes size {
+    0%{
+        size: 250px;
+    }
+    100%{
+        size: 700px;
+    }
+}
+#div2{
+    height: 500px;
+    width: 500px;
+    background-image: repeating-radial-gradient(red, red 10px, blue 10px, blue 20px);
+    animation: rotate 10s none none infinite none none;
+}

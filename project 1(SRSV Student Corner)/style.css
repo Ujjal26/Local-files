@@ -1,0 +1,147 @@
+#heading{
+  text-align: center;
+}
+#About{
+  background-image: linear-gradient(
+      to bottom right,
+      rgb(235, 158, 127),
+      rgb(224, 98, 48)
+    );
+    height:fit-content;
+    margin: 50px;
+    padding:10px ;
+  }
+#PHARMACOLOGY{
+  background-image: linear-gradient(
+      to bottom right,
+      rgb(127, 206, 235),
+      rgb(54, 179, 224)
+    );
+    height:fit-content;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    padding:10px ;
+}
+#BIOCHEMISTRY{
+  background-image: linear-gradient(
+      to bottom right,
+      rgb(136, 235, 127),
+      rgb(78, 233, 64)
+    );
+    height:fit-content;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    padding:10px ;
+}
+#HOSPITAL{
+  background-image: linear-gradient(
+      to bottom right,
+      rgb(127, 206, 235),
+      rgb(54, 179, 224)
+    );
+    height:fit-content;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    padding:10px ;
+}
+  #generalnotes{
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(235, 158, 127),
+        rgb(224, 98, 48)
+      );
+      height:fit-content;
+      margin: 50px;
+      padding:10px ;
+    }
+  #classnotes{
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(235, 158, 127),
+        rgb(224, 98, 48)
+      );
+      height:fit-content;
+      margin-top: 50px;
+      margin-left: 10px;
+      margin-right: 15px;
+      padding:10px ;
+}
+/* Modal styles */
+.btnmodal{
+text-align: center;
+}
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 800px;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+background-color: #fefefe;
+margin: 20px auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+.modalbtn{
+background-color:rgb(187, 61, 11);
+border: none;
+color: white;
+padding: 15px 15px;
+text-align: center;
+text-decoration: none;
+display:block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+height: fit-content;
+width: fit-content;
+border-radius: 20px;
+}
+.btnmodal{
+  /* background-color:rgb(187, 61, 11); */
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 20px;
+  }
+.modalbtn:hover {
+background-color:  rgb(228, 82, 25);
+}
+.btnmodal:hover {
+  background-color:  rgb(186, 186, 186);
+  }
+.ifrm{
+height: 600px;
+display: block;
+width: 100%;
+}
+#welcomeanimation{
+  position: absolute;
+  left: 0;
+  animation: animate 5s infinite forwards;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(-100);
+  }
+  100% {
+    transform: translateX(100);
+  }
+}

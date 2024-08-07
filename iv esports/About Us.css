@@ -1,0 +1,23 @@
+
+body{
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(35, 58, 188),
+        rgb(70, 119, 214),
+        rgb(126, 214, 236),
+        rgb(127, 215, 235),
+        rgb(17, 136, 160)
+      );
+      height: 850px;
+    }
+.card{
+    margin: 50px;
+    background-color: transparent;
+    border: 2px solid black;
+    padding:5px ;
+}
+.cardwrap{
+    margin-left: 150px;
+    flex-wrap: wrap;
+    display: flex;
+}

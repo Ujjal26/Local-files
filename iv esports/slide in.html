@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide In Animation with Scrolling</title>
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  height: 200vh; /* Makes the container 2 times the viewport height */
+  overflow: hidden; /* Hides content that overflows the container */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin-left: 5ps;
+  position: relative;
+  left: 1000%; /* Initially positioned outside the viewport */
+  animation: slideIn 5s  forwards; /* Animation to slide in */
+}
+
+@keyframes slideIn {
+  to {
+    left: 0; /* Slides the box to the left edge of the viewport */
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">HELLO WORLD</div>
+  </div>
+  <div class="container">
+    <div class="box">I AM UJJAL</div>
+  </div>
+  <script>
+  window.addEventListener('scroll', function() {
+    const box = document.querySelector('.box');
+    const scrollPosition = window.scrollY + window.innerHeight;
+  
+    // Adjust the condition as per your requirement
+    if (scrollPosition > 500) {
+      box.style.animation = 'none'; // Pause animation
+    } else {
+      box.style.animation = 'slideIn 1s forwards'; // Resume animation
+    }
+  });
+  </script>
+</body>
+</html>
