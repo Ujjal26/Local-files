@@ -145,3 +145,14 @@ width: 100%;
     transform: translateX(100);
   }
 }
+
+/* Hide toolbar of iframe */
+
+iframe {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+iframe::-webkit-scrollbar { 
+  display: none; /* Safari and Chrome */
+}

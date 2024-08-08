@@ -32,19 +32,3 @@ window.onclick = function(event) {
 }
 
 // Disable or hide toolbar in modal
-jQuery('#iframe').load(function(){
-    jQuery('#iframe').contents().find("#toolbarViewerRight").hide();
-});
-
-function goFullscreen() {
-    var iframe = document.getElementById('ifrm');
-    if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-    } else if (iframe.mozRequestFullScreen) { // Firefox
-        iframe.mozRequestFullScreen();
-    } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
-        iframe.webkitRequestFullscreen();
-    } else if (iframe.msRequestFullscreen) { // IE/Edge
-        iframe.msRequestFullscreen();
-    }
-}
