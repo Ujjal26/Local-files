@@ -10,11 +10,87 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="icon" type="logo/x-icon" href="srsv logo.jpeg">
     <title>SRSV Student Corner</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="logo/x-icon" href="srsv logo.jpeg">
+    <style>
+        /* Modal styles */
+        .sign {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+    
+        .sign-content {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: fit-content;
+        }
+    
+        #modalbtn {
+          background-color: #d6d3d3;
+          border: 1px solid black;
+          color: black;
+          margin: 15px 15px;
+          border-radius: 5%;
+        }
+    
+        #btnmodal {
+          background-color: #ed8d55;
+          border: 1px solid black;
+          color: black;
+          margin: auto;
+          width: fit-content;
+          display: block;
+          border-radius: 6%;
+        }
+    
+        .frominput {
+          width: 300px;
+          height: 30px;
+          border-radius: 5px;
+          border: 1px solid black;
+          margin: 10px 10px;
+          padding: 10px 10px;
+          font-size: 15px;
+          outline: none;
+          color: black;
+    
+        }
+    
+        #check {
+          margin: 3px 2px;
+        }
+      </style>
   </head>
   <body>
+
+    <!-- TODO: SIGN IN TAB -->
+  
+  <div id="sign1" class="sign">
+    <div class="sign-content">
+      <div style="text-align: center;">
+        <h2>sign in</h2>
+      </div>
+      <div id="login">
+        <form id="loginfrm">
+          <input type="name" placeholder="username" class="frominput" id="myInputuser" /><br>
+          <input type="password" placeholder="password" id="myInputpass" class="frominput" /><br>
+          <input type="checkbox" id="check" onclick="myFunction()" />Show password
+        </form>
+      </div>
+      <input type="submit" id="btnmodal" onclick="checkpass()" onclick="closeModal('sign1')" onclick="changetype()"
+        value="submit" />
+    </div>
+  </div>
     <!-- <h1>PDF READER</h1>
     <embed src="KDT Pharmacology.pdf" height="500" width="1000"> -->
     <!-- TODO: NAVIGATION BAR -->
@@ -67,6 +143,8 @@
         </div>
       </div>
     </nav>
+
+
     <!-- TODO: WELCOME ANIMATION !!!!! -->
     <div id="welcomeanimation">
       <h4>&#9734; Welcome to SRSV Student Corner &#9734;</h4>
@@ -157,7 +235,6 @@
                   <div class="card-body">
                     <div id="para1" class="para">
                       <ul style="list-style-type: none;">
-
                         <!-- TODO: ANALGESICS, ANTI-PYRETICS & ANTI-INFLAMATORY -->
                         <li>
                           <!-- Button to open 3rds modal -->
@@ -166,11 +243,10 @@
                           <div id="modal3" class="modal">
                             <div class="modal-content">
                               <button class="btnmodal" onclick="closeModal('modal3')">&#x2716;</button>
-                              <iframe class="ifrm" src="https://drive.google.com/file/d/1ATrHsDS8jCnmonRoxyQkvouMBjZKDY2y/preview"></iframe>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1j7PFAkiIy-j7lV4VYEK6XpdvzKXVVH9i/preview"></iframe>
                             </div>
                           </div>
                         </li>
-
                         <!-- TODO: antipsychotic -->
                         <li>
                           <!-- Button to open 4th modal -->
@@ -179,101 +255,10 @@
                           <div id="modal4" class="modal">
                             <div class="modal-content">
                               <button class="btnmodal" onclick="closeModal('modal4')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/antipsychotic.pdf"></iframe>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1NHrm7g-JRKfMu1BaKhiIQhvKNbDjoB_X/preview"></iframe>
                             </div>
                           </div>
                         </li>
-
-                        <!-- TODO: Baro receptor reflex system -->
-                        <li>
-                          <!-- Button to open 11th modal -->
-                          <button class="modalbtn" onclick="openModal('modal11')">baro receptor reflex system</button>
-                          <!-- Fifth Modal -->
-                          <div id="modal11" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal11')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/baro receptor reflex system.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
-                        <!-- TODO: CHEMOTHERAPEUTIC AGENTS-I (Sulfonamides)-->
-                        <li>
-                          <!-- Button to open 3rds modal -->
-                          <button class="modalbtn" onclick="openModal('modal15')">CHEMOTHERAPEUTIC AGENTS-I (Sulfonamides)</button>
-                          <!-- Third Modal -->
-                          <div id="modal15" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal15')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/CHEMOTHERAPEUTIC AGENTS-I (Sulfonamides) 1.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
-                        <!-- TODO: CHEMOTHERAPEUTIC AGENTS-II (Beta-lactams)-->
-                        <li>
-                          <!-- Button to open 3rds modal -->
-                          <button class="modalbtn" onclick="openModal('modal16')">CHEMOTHERAPEUTIC AGENTS-II (Beta-lactams)</button>
-                          <!-- Third Modal -->
-                          <div id="modal16" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal16')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/CHEMOTHERAPEUTIC AGENTS-II (Beta-lactams).pdf"></iframe>
-                            </div>
-                          </div>
-                          
-                        <!-- TODO: CHEMOTHERAPEUTIC AGENTS-III (Fluoroquinolones)-->
-                        <li>
-                          <!-- Button to open 3rds modal -->
-                          <button class="modalbtn" onclick="openModal('modal18')">CHEMOTHERAPEUTIC AGENTS-III (Fluoroquinolones)</button>
-                          <!-- Third Modal -->
-                          <div id="modal18" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal18')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/CHEMOTHERAPEUTIC AGENTS-III (Fluoroquinolones).pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
-                        <!-- TODO: CHEMOTHERAPY OF VIRAL DISEASES-I (Non-Retro Virus)-->
-                        <li>
-                          <!-- Button to open 3rds modal -->
-                          <button class="modalbtn" onclick="openModal('modal20')">CHEMOTHERAPY OF VIRAL DISEASES-I (Non-Retro Virus)</button>
-                          <!-- Third Modal -->
-                          <div id="modal20" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal20')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/CHEMOTHERAPY OF VIRAL DISEASES-I (Non-Retro Virus).pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
-                        <!-- TODO: CHEMOTHERAPY OF VIRAL DISEASES-II (Retro Virus- HIV)-->
-                        <li>
-                          <!-- Button to open modal -->
-                          <button class="modalbtn" onclick="openModal('modal21')">CHEMOTHERAPY OF VIRAL DISEASES-II (Retro Virus- HIV)</button>
-                          <!--Modal -->
-                          <div id="modal21" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal21')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/CHEMOTHERAPY OF VIRAL DISEASES-II (Retro Virus- HIV).pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
-                        <!-- TODO: CHEMOTHERAPY OF CANCER-->
-                        <li>
-                          <!-- Button to open 3rds modal -->
-                          <button class="modalbtn" onclick="openModal('modal19')">CHEMOTHERAPY OF CANCER</button>
-                          <!-- Third Modal -->
-                          <div id="modal19" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal19')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/CHEMOTHERAPY OF CANCER.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
                         <!-- TODO: Drugs acting on cardiovascular system -->
                         <li>
                           <!-- Button to open 5th modal -->
@@ -282,112 +267,10 @@
                           <div id="modal5" class="modal">
                             <div class="modal-content">
                               <button class="btnmodal" onclick="closeModal('modal5')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/CVS.pdf"></iframe>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1B9nm0u-B3wZ-NWs1_eptNERFrdjK3zQu/preview"></iframe>
                             </div>
                           </div>
                         </li>
-
-                        <!-- TODO: Drugs used in respiratory -->
-                        <li>
-                          <!-- Button to open 11th modal -->
-                          <button class="modalbtn" onclick="openModal('modal12')">Drugs used in respiratory</button>
-                          <!-- Fifth Modal -->
-                          <div id="modal12" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal12')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/drugs used in respiratory system.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
-                        <!-- TODO: Drugs Acting On GI Tract -->
-                        <li>
-                          <!-- Button to open 9th modal -->
-                          <button class="modalbtn" onclick="openModal('modal9')">Drugs Acting On GI Tract</button>
-                          <!-- Fifth Modal -->
-                          <div id="modal9" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal9')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/GI tract.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-                        <!-- TODO: Diuretics -->
-                        <li>
-                          <!-- Button to open 9th modal -->
-                          <button class="modalbtn" onclick="openModal('modal25')">Diuretics</button>
-                          <!-- Fifth Modal -->
-                          <div id="modal25" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal9')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/diuretics.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
-                        <!-- TODO: EPILEPSY & ANTI-EPILEPTIC DRUGS -->
-                        <li>
-                          <!-- Button to open 11th modal -->
-                          <button class="modalbtn" onclick="openModal('modal13')">EPILEPSY & ANTI-EPILEPTIC DRUGS</button>
-                          <!-- Fifth Modal -->
-                          <div id="modal13" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal13')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/EPILEPSY & ANTI-EPILEPTIC DRUGS-1.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
-                        <!-- TODO: GENERAL ANAESTHETICS -->
-                        <li>
-                          <!-- Button to open 10th modal -->
-                          <button class="modalbtn" onclick="openModal('modal10')">GENERAL ANAESTHETICS</button>
-                          <!-- Fifth Modal -->
-                          <div id="modal10" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal10')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/GENERAL ANAESTHETICS.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
-                        <!-- TODO: HORMONES AND HORMONE ANTAGONISTS-I-->
-                        <li>
-                          <!-- Button to open modal -->
-                          <button class="modalbtn" onclick="openModal('modal22')">HORMONES AND HORMONE ANTAGONISTS-I</button>
-                          <!--Modal -->
-                          <div id="modal22" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal22')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/HORMONES AND HORMONE ANTAGONISTS-I.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-                        <!-- TODO: HORMONES AND HORMONE ANTAGONISTS-II-->
-                        <li>
-                          <!-- Button to open modal -->
-                          <button class="modalbtn" onclick="openModal('modal23')">HORMONES AND HORMONE ANTAGONISTS-II</button>
-                          <!--Modal -->
-                          <div id="modal23" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal23')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/HORMONES AND HORMONE ANTAGONISTS-II.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-                        <!-- TODO: HORMONES AND HORMONE ANTAGONISTS-III-->
-                        <li>
-                          <!-- Button to open modal -->
-                          <button class="modalbtn" onclick="openModal('modal24')">HORMONES AND HORMONE ANTAGONISTS-III</button>
-                          <!--Modal -->
-                          <div id="modal24" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal24')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/HORMONES AND HORMONE ANTAGONISTS-III.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
                         <!-- TODO: Hypoglycemia(Anti-Diabetes) -->
                         <li>
                           <!-- Button to open 6th modal -->
@@ -396,37 +279,10 @@
                           <div id="modal6" class="modal">
                             <div class="modal-content">
                               <button class="btnmodal" onclick="closeModal('modal6')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/hypoglycemia(anti-diabetic).pdf"></iframe>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1MqOwuRZk--MUTan9kGcmbVWlIJRVKcFh/preview"></iframe>
                             </div>
                           </div>
                         </li>
-                    
-                        <!-- TODO: LOCAL ANAESTHETICS -->
-                        <li>
-                          <!-- Button to open 11th modal -->
-                          <button class="modalbtn" onclick="openModal('modal14')">LOCAL ANAESTHETICS</button>
-                          <!-- Fifth Modal -->
-                          <div id="modal14" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal14')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/LOCAL ANAESTHETICS.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-                        
-                        <!-- TODO: Malaria -->
-                        <li>
-                          <!-- Button to open 8th modal -->
-                          <button class="modalbtn" onclick="openModal('modal8')">Malaria</button>
-                          <!-- Fifth Modal -->
-                          <div id="modal8" class="modal">
-                            <div class="modal-content">
-                              <button class="btnmodal" onclick="closeModal('modal8')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/malaria.pdf"></iframe>
-                            </div>
-                          </div>
-                        </li>
-
                         <!-- TODO: SEDATIVES & HYPNOTICS -->
                         <li>
                           <!-- Button to open 7th modal -->
@@ -435,11 +291,94 @@
                           <div id="modal7" class="modal">
                             <div class="modal-content">
                               <button class="btnmodal" onclick="closeModal('modal7')">&#x2716;</button>
-                              <iframe class="ifrm" src="cology/SEDATIVES & HYPNOTICS.pdf"></iframe>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1z_ONnptlsbAkngUBzZLQExOyvqNP5PcE/preview"></iframe>
                             </div>
                           </div>
                         </li>
-                         
+                         <!-- TODO: Malaria -->
+                         <li>
+                          <!-- Button to open 8th modal -->
+                          <button class="modalbtn" onclick="openModal('modal8')">Malaria</button>
+                          <!-- Fifth Modal -->
+                          <div id="modal8" class="modal">
+                            <div class="modal-content">
+                              <button class="btnmodal" onclick="closeModal('modal8')">&#x2716;</button>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1B4avTCs2zOjcLQDZFWj3ynC5_3owm5GV/preview"></iframe>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- TODO: Drugs Acting On GI Tract -->
+                        <li>
+                          <!-- Button to open 9th modal -->
+                          <button class="modalbtn" onclick="openModal('modal9')">Drugs Acting On GI Tract</button>
+                          <!-- Fifth Modal -->
+                          <div id="modal9" class="modal">
+                            <div class="modal-content">
+                              <button class="btnmodal" onclick="closeModal('modal9')">&#x2716;</button>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1Y5lHj4Ap7f5FmASll9DBfv3xBqqd2XEy/preview"></iframe>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- TODO: GENERAL ANAESTHETICS -->
+                        <li>
+                          <!-- Button to open 10th modal -->
+                          <button class="modalbtn" onclick="openModal('modal10')">GENERAL ANAESTHETICS</button>
+                          <!-- Fifth Modal -->
+                          <div id="modal10" class="modal">
+                            <div class="modal-content">
+                              <button class="btnmodal" onclick="closeModal('modal10')">&#x2716;</button>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1BdJUS1206ncmmxfxP0wzhQQgVwzxiIue/preview"></iframe>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- TODO: GENERAL baro receptor reflex system -->
+                        <li>
+                          <!-- Button to open 11th modal -->
+                          <button class="modalbtn" onclick="openModal('modal11')">baro receptor reflex system</button>
+                          <!-- Fifth Modal -->
+                          <div id="modal11" class="modal">
+                            <div class="modal-content">
+                              <button class="btnmodal" onclick="closeModal('modal11')">&#x2716;</button>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1zdhnCH9JTe5oKPa6Oe_fcvHQqPuDFqZe/preview"></iframe>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- TODO: drugs used in respiratory -->
+                        <li>
+                          <!-- Button to open 11th modal -->
+                          <button class="modalbtn" onclick="openModal('modal12')">Drugs used in respiratory</button>
+                          <!-- Fifth Modal -->
+                          <div id="modal12" class="modal">
+                            <div class="modal-content">
+                              <button class="btnmodal" onclick="closeModal('modal12')">&#x2716;</button>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1rS4z0BvwACwEM4y2PpkaI9q3e_LNB-uq/preview"></iframe>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- TODO: EPILEPSY & ANTI-EPILEPTIC DRUGS -->
+                        <li>
+                          <!-- Button to open 11th modal -->
+                          <button class="modalbtn" onclick="openModal('modal13')">EPILEPSY & ANTI-EPILEPTIC DRUGS</button>
+                          <!-- Fifth Modal -->
+                          <div id="modal13" class="modal">
+                            <div class="modal-content">
+                              <button class="btnmodal" onclick="closeModal('modal13')">&#x2716;</button>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1zd30OZhU25skeWWd49H_yH0KqCLDFwll/preview"></iframe>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- TODO: LOCAL ANAESTHETICS -->
+                        <li>
+                          <!-- Button to open 11th modal -->
+                          <button class="modalbtn" onclick="openModal('modal13')">LOCAL ANAESTHETICS</button>
+                          <!-- Fifth Modal -->
+                          <div id="modal13" class="modal">
+                            <div class="modal-content">
+                              <button class="btnmodal" onclick="closeModal('modal13')">&#x2716;</button>
+                              <iframe class="ifrm" src="https://drive.google.com/file/d/1QQT2ARd-oBFshKHhG4V6vygric2hX_3l/preview"></iframe>
+                            </div>
+                          </div>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -526,5 +465,69 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // Function to open a modal
+        function openModal(modalId) {
+          var modal = document.getElementById(modalId);
+          modal.style.display = "block";
+        }
+    
+        // Function to close a modal
+        function closeModal(modalId) {
+          var modal = document.getElementById(modalId);
+          modal.style.display = "none";
+        }
+        // Function to toggle password visibility
+        function myFunction() {
+          var x = document.getElementById("myInputpass");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+        // Function to check password validity
+        function checkpass() {
+          var y = document.getElementById("myInputpass");
+          var x = document.getElementById("myInputuser");
+          if (x.value == "" && y.value == "") {
+            alert("please enter username and password");
+          }
+          else if (x.value == "Ujjal@2004" && y.value == "UjjalDebnath") {
+            alert("you are logged in");
+            window.location.href = "index.html";
+          }
+          else {
+            alert("sorry you are not allowed to login");
+            window.location.href = "error.html";
+          }
+        }
+        // Function to toggle password type
+        function changetype() {
+          var x = document.getElementById("myInputpass");
+          if (x.type === "text") {
+            x.type = "password";
+          }
+        }
+        // Function to show the modal
+        function showModal() {
+          document.getElementById("sign1").style.display = "flex";
+        }
+    
+        // Function to close the modal
+        function closeModal() {
+          document.getElementById("sign1").style.display = "none";
+        }
+    
+        // Show the modal when the page loads
+        window.onload = function () {
+          showModal();
+        };
+        // Function to open login page whenever the website loads
+        // window.onload = function () {
+        //   var modal = document.getElementById("modal-content");
+        //   modal.style.display = "block";
+        // };
+      </script>
   </body>
 </html>
