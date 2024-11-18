@@ -13,63 +13,6 @@
     <title>SRSV Student Corner</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="logo/x-icon" href="srsv logo.jpeg">
-    <style>
-        /* Modal styles */
-        .sign {
-          display: none;
-          position: fixed;
-          z-index: 1;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          overflow: auto;
-          background-color: rgba(0, 0, 0, 0.4);
-        }
-    
-        .sign-content {
-          background-color: #fefefe;
-          margin: 15% auto;
-          padding: 20px;
-          border: 1px solid #888;
-          width: fit-content;
-        }
-    
-        #modalbtn {
-          background-color: #d6d3d3;
-          border: 1px solid black;
-          color: black;
-          margin: 15px 15px;
-          border-radius: 5%;
-        }
-    
-        #btnmodal {
-          background-color: #ed8d55;
-          border: 1px solid black;
-          color: black;
-          margin: auto;
-          width: fit-content;
-          display: block;
-          border-radius: 6%;
-        }
-    
-        .frominput {
-          width: 300px;
-          height: 30px;
-          border-radius: 5px;
-          border: 1px solid black;
-          margin: 10px 10px;
-          padding: 10px 10px;
-          font-size: 15px;
-          outline: none;
-          color: black;
-    
-        }
-    
-        #check {
-          margin: 3px 2px;
-        }
-      </style>
   </head>
   <body>
 
@@ -87,7 +30,7 @@
           <input type="checkbox" id="check" onclick="myFunction()" />Show password
         </form>
       </div>
-      <input type="submit" id="btnmodal" onclick="checkpass()" onclick="closeModal('sign1')" onclick="changetype()"
+      <input type="submit" id="btnsign" onclick="checkpass()" onclick="closeModal('sign1')" onclick="changetype()"
         value="submit" />
     </div>
   </div>
@@ -465,66 +408,5 @@
       </div>
     </div>
     <script src="script.js"></script>
-    <script>
-        // Function to open a modal
-        function openModal(modalId) {
-          var modal = document.getElementById(modalId);
-          modal.style.display = "block";
-        }
-    
-        // Function to close a modal
-        function closeModal(modalId) {
-          var modal = document.getElementById(modalId);
-          modal.style.display = "none";
-        }
-        // Function to toggle password visibility
-        function myFunction() {
-          var x = document.getElementById("myInputpass");
-          if (x.type === "password") {
-            x.type = "text";
-          } else {
-            x.type = "password";
-          }
-        }
-        // Function to check password validity
-        function checkpass() {
-          var y = document.getElementById("myInputpass");
-          var x = document.getElementById("myInputuser");
-          if (x.value == "" && y.value == "") {
-            alert("please enter username and password");
-          }
-          else if (x.value == "SRSV" && y.value == "Srsvpart2") {
-            alert("you are logged in");
-            document.getElementById("sign1").style.display="none";
-          }
-          else {
-            alert("sorry you are not allowed to login");
-            window.location.href = "error.html";
-          }
-        }
-        // Function to toggle password type
-        function changetype() {
-          var x = document.getElementById("myInputpass");
-          if (x.type === "text") {
-            x.type = "password";
-          }
-        }
-        // Function to show the modal
-        function showModal() {
-          document.getElementById("sign1").style.display = "flex";
-        }
-    
-        // Function to close the modal
-    
-        // Show the modal when the page loads
-        window.onload = function () {
-          showModal();
-        };
-        // Function to open login page whenever the website loads
-        // window.onload = function () {
-        //   var modal = document.getElementById("modal-content");
-        //   modal.style.display = "block";
-        // };
-      </script>
   </body>
 </html>
