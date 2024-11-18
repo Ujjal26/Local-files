@@ -178,6 +178,7 @@ iframe::-webkit-scrollbar {
   border: 1px solid #888;
   width: fit-content;
   height: fit-content ;
+  border-radius: 5%;
 }
 
 /* #signbtn {
@@ -192,7 +193,7 @@ iframe::-webkit-scrollbar {
   background-color: #ed8d55;
   border: 1px solid black;
   color: black;
-  margin: auto;
+  margin: 5% auto;
   width: fit-content;
   display: block;
   border-radius: 6%;
