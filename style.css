@@ -86,7 +86,7 @@ text-align: center;
 }
 
 .modal-content {
-  background-color: #fefefe;
+  /* background-color: #fefefe; */
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -94,6 +94,13 @@ text-align: center;
   max-width: 600px; /* Maximum width */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+
+  @media (max-width: 600px) {
+    .modal-content {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+  }
+
 }.modalbtn{
 background-color:rgb(187, 61, 11);
 border: none;
@@ -132,10 +139,15 @@ background-color:  rgb(228, 82, 25);
   background-color:  rgb(186, 186, 186);
   }
 .ifrm{
-height: 600px;
-display: block;
-width: 100%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  max-width: 800px; /* Maximum width */
+  max-height: 600px; /* Maximum height */
+  border: none; /* Remove border */
+  display: block; /* Ensure it behaves like a block element */
+  margin: auto; /* Center it horizontally */
 }
+
 #welcomeanimation{
   position: absolute;
   left: 0;
