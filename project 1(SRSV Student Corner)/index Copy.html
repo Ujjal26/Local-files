@@ -1,0 +1,578 @@
+
+<!-- TODO: a webpage for storing study material -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>SRSV Student Corner</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="logo/x-icon" href="srsv logo.jpeg">
+  </head>
+  <body>
+
+    <!-- FIXME: SIGN IN TAB -->
+  
+  <!-- <div id="sign1" class="sign">
+    <div class="sign-content">
+      <div style="text-align: center;">
+        <h2>sign in</h2>
+      </div>
+      <div id="login">
+        <form id="loginfrm">
+          <input type="name" placeholder="username" class="frominput" id="myInputuser" /><br>
+          <input type="password" placeholder="password" id="myInputpass" class="frominput" /><br>
+          <input type="checkbox" id="check" onclick="myFunction()" />Show password
+        </form>
+      </div>
+      <input type="submit" id="btnsign" onclick="checkpass()" onclick="closeModal('sign1')" onclick="changetype()"
+        value="submit" />
+    </div>
+  </div> -->
+    <!-- <h1>PDF READER</h1>
+    <embed src="KDT Pharmacology.pdf" height="500" width="1000"> -->
+    <!-- TODO: NAVIGATION BAR -->
+    <div id="heading">
+      <h4>Sree RamKrishna Silpa Vidyapith Student Corner</h4>
+    </div>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Search Bar</a>
+        <button
+          class="navbar-toggler"
+          id="navbt"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" class="navbarTabLine">
+              <a class="nav-link active" aria-current="page" href="#home"
+                ><h3 class="nav-item-heading">Home</h3></a
+              >
+            </li>
+            <li class="nav-item" class="navbarTabLine">
+              <a class="nav-link" href="#About"
+                ><h3 class="nav-item-heading">About Us</h3></a>
+            </li>
+            <!-- <li class="nav-item" class="navbarTabLine">
+              <a class="nav-link" href="#generalnotes"
+                ><h3 class="nav-item-heading">General notes</h3></a
+              >
+            </li> -->
+            <!-- TODO: DROPDOWN LIST -->
+            <li class="nav-item dropdown" >
+              <h3><a class="nav-link dropdown-toggle" id="dropdownbtn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Class Notes
+              </a></h3>
+              <ul class="dropdown-menu" id="dropdownlist"id="dropdownlist">
+                <li><a class="dropdown-item" href="#PHARMACOLOGY">PHARMACOLOGY</a></li>
+                <li><a class="dropdown-item" href="#BIOCHEMISTRY">BIOCHEMISTRY</a></li>
+                <li><a class="dropdown-item" href="#HOSPITAL">HOSPITAL</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- TODO: WELCOME ANIMATION !!!!! -->
+    <div id="welcomeanimation">
+      <h4>&#9734; Welcome to SRSV Student Corner</h4>
+    </div>
+    <!-- TODO: about Section -->
+    <div id="About">
+      <div id="card-content-about">
+        <h2 class="card-header" id="card-header-about">About Us</h2>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div id="para1" class="para">
+            <p class="card-text">
+              Hello readers !<br />
+              I am <b>Ujjal Debnath</b> a student of second year D.pharm <b>Batch: 2022-2024</b> at
+              SRSV. welcome to my website and i hope you all enjoy reading the
+              study materials provided by our college. Remember this is a
+              website only for the students, here I will post every pdf provided
+              by our college which contain study materials(excluding all the
+              parcticals). I made this website so that everyone can read any
+              study material anywhere with or without downloading it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- TODO: GENERAL NOTES SECTION -->
+    <!-- <div>
+      <div id="generalnotes">
+        <h2 class="card-header">General Notes</h2>
+        <div class="card">
+          <div class="card-body">
+            <div class="para">
+              <p class="card-text">
+                Hello readers !<br />
+                here you can get all the class notes provided by every teacher.
+              </p>
+              <ul style="list-style-type: none;"> -->
+                <!-- <li> -->
+                  <!-- Button to open first modal -->
+                  <!-- <button class="modalbtn" onclick="window.open('modal1')">KDT Pharmacology</button> -->
+                  <!-- First Modal -->
+                    <!-- <div id="modal1" class="modal">
+                      <div class="modal-content">
+                        
+                        <iframe class="ifrm" src="https://drive.google.com/file/d/10EIPi_YOmZ7CNRa-0cixiWXPuSpvLCOk/preview"></iframe>
+                            <div class="btnmodal">
+                              <button class="btnmodal" onclick="closeModal('modal1')">&#x2716;</button>
+                            </div>
+                      </div>
+                    </div>
+                </li>
+                <li>-->
+                  <!-- Button to open second modal -->
+                  <!-- <button class="modalbtn" onclick="window.open('modal2')">Pharmacological Classification of Drugs kd tripathi</button> -->
+                  <!-- Second Modal -->
+                  <!-- <div id="modal2" class="modal">
+                    <div class="modal-content">
+                      <iframe class="ifrm" src="https://drive.google.com/file/d/1JTQY0hRUPJRePSz-VLnB6WWB4q5BI9Ix/preview"></iframe>
+                        <div class="btnmodal">
+                          <button class="btnmodal" onclick="closeModal('modal2')">&#x2716;</button>
+                        </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- TODO: CLASS NOTE SECTION -->
+    <div>
+      <div id="classnotes">
+        <h2 class="card-header">Class notes</h2>
+        <div class="card">
+          <div class="card-body">
+            <div class="para">
+              <p class="card-text">
+                Hello readers !<br />
+                here you can get all the class notes provided by every teacher.
+              </p>
+              <div id="PHARMACOLOGY">
+                <div id="card-content-about">
+                  <h2 class="card-header" id="card-header-about">PHARMACOLOGY</h2>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <div id="para1" class="para">
+                      <ul style="list-style-type: none;">
+                        <!-- TODO: ANALGESICS, ANTI-PYRETICS & ANTI-INFLAMATORY -->
+                        <li>
+                          <!-- Button to open 3rds modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1ATrHsDS8jCnmonRoxyQkvouMBjZKDY2y/preview')">ANALGESICS, ANTI-PYRETICS & ANTI-INFLAMATORY</button>
+                        
+                        </li>
+                        <!-- TODO: antipsychotic -->
+                        <li>
+                          <!-- Button to open 4th modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1NHrm7g-JRKfMu1BaKhiIQhvKNbDjoB_X/preview')">antipsychotic</button>
+
+                        </li>
+                      <!-- TODO: Baro receptor reflex system -->
+                      <li>
+                        <!-- Button to open 11th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1d7kQHO99EICGAT4W_UhVwbXamuDFEK4_/preview')">baro receptor reflex system</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPEUTIC AGENTS-I (Sulfonamides)-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1S3IbgbUa3ZsxfDOOMxmzwQwdQ7VgsIa4/preview')">CHEMOTHERAPEUTIC AGENTS-I (Sulfonamides)</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPEUTIC AGENTS-II (Beta-lactams)-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1m6pz4ivRmr3pcj0OmtoeGggyuH--vaKh/preview')">CHEMOTHERAPEUTIC AGENTS-II (Beta-lactams)</button>
+                      
+                     </li>
+                        
+                      <!-- TODO: CHEMOTHERAPEUTIC AGENTS-III (Fluoroquinolones)-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1QDv92YHSAKObi_BYHOLu0X9gSX7YNd8G/preview')">CHEMOTHERAPEUTIC AGENTS-III (Fluoroquinolones)</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPEUTIC AGENTS-IV (Tetracyclines & Chloramphenicol)-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1rUD70o1-Gn8orvEACn9npRkHKCOmGu6M/preview')">CHEMOTHERAPEUTIC AGENTS-III (Fluoroquinolones)</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPEUTIC AGENTS–V (Macrolides)-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1hEBwlPVtY1VTRtfhqLOAM1Nn_DDe4xzR/preview')">CHEMOTHERAPEUTIC AGENTS–V (Macrolides)</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPEUTIC AGENTS-VI (Aminoglycosides)-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1hFzyhkU14htncp2JW4iVqAdYURVSfcPC/preview')">CHEMOTHERAPEUTIC AGENTS-VI (Aminoglycosides)</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPY OF VIRAL DISEASES-I (Non-Retro Virus)-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1eUT2oXzTkEZ4Vic24YCuw02sNYu1iOX3/preview')">CHEMOTHERAPY OF VIRAL DISEASES-I (Non-Retro Virus)</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPY OF VIRAL DISEASES-II (Retro Virus- HIV)-->
+                      <li>
+                        <!-- Button to open modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1JPRd1YRrhDOrOWJf3n4OKpuHFDZlSwU5/preview')">CHEMOTHERAPY OF VIRAL DISEASES-II (Retro Virus- HIV)</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPY OF CANCER-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1Kb40nlDQ-Isa3QHwLI2iu-deRdldDh7e/preview')">CHEMOTHERAPY OF CANCER</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPY OF FUNGAL DISEASES-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1xvMWuoLl0yibHcABRBAN180KJq0swSfd/preview')">CHEMOTHERAPY OF FUNGAL DISEASES</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPY OF PROTOZOAL & PARASITIC DISEASES-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1ZlLnrDUW-CW-vJeumJwhwEbCpltv2jdX/preview')">CHEMOTHERAPY OF PROTOZOAL & PARASITIC DISEASES</button>
+                        
+                      </li>
+
+                      <!-- TODO: CHEMOTHERAPY OF VENERAL DISEASES-->
+                      <li>
+                        <!-- Button to open 3rds modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1q_5VzSlzvXKj9222TSXP-QKH54h2maV-/preview')">CHEMOTHERAPY OF VENERAL DISEASES</button>
+                        
+                      </li>
+
+                      <!-- TODO: Drugs acting on cardiovascular system -->
+                      <li>
+                        <!-- Button to open 5th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1ZQAASUjQ0iXB8ZOY6ETTBRCAEqFozWm9/preview')">Drugs acting on cardiovascular system</button>
+                        
+                      </li>
+
+                      <!-- TODO: Drugs used in respiratory -->
+                      <li>
+                        <!-- Button to open 11th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1SqYMOPxaOQaRWLuQP16rqkB-kLa-3Rmg/preview')">Drugs used in respiratory</button>
+                        
+                      </li>
+
+                      <!-- TODO: Drugs Acting On GI Tract -->
+                      <li>
+                        <!-- Button to open 9th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1IIQ24-61HMW_6zciPQGy8xkS9yJBdJCM/preview')">Drugs Acting On GI Tract</button>
+                        
+                      </li>
+                      <!-- TODO: Diuretics -->
+                      <li>
+                        <!-- Button to open 9th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1hSPeKaBp3K2z-3h-pOHSBLJIUw6al-4K/preview')">Diuretics</button>
+                        
+                      </li>
+
+                      <!-- TODO: EPILEPSY & ANTI-EPILEPTIC DRUGS -->
+                      <li>
+                        <!-- Button to open 11th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1E9jSERhcJZ251XOb9pT4dmB_8h9xkp3i/preview')">EPILEPSY & ANTI-EPILEPTIC DRUGS</button>
+                        
+                      </li>
+
+                      <!-- TODO: GENERAL ANAESTHETICS -->
+                      <li>
+                        <!-- Button to open 10th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1_IJpVsCV-SUjDh2Wjrml0NUeGrsOioud/preview')">GENERAL ANAESTHETICS</button>
+                        
+                      </li>
+
+                      <!-- TODO: HORMONES AND HORMONE ANTAGONISTS-I-->
+                      <li>
+                        <!-- Button to open modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1BGlNQD9-AKrCTxmDdySbqrAp_8DWhLC4/preview')">HORMONES AND HORMONE ANTAGONISTS-I</button>
+                        
+                      </li>
+                      <!-- TODO: HORMONES AND HORMONE ANTAGONISTS-II-->
+                      <li>
+                        <!-- Button to open modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/15REzpPxtdvGtw0uFdknOoN_L-LnEBdCI/preview')">HORMONES AND HORMONE ANTAGONISTS-II</button>
+                        
+                      </li>
+                      <!-- TODO: HORMONES AND HORMONE ANTAGONISTS-III-->
+                      <li>
+                        <!-- Button to open modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1lg0R2aVvPi04-ac9FvE6Uw5xua5Jvssx/preview')">HORMONES AND HORMONE ANTAGONISTS-III</button>
+                        
+                      </li>
+
+                      <!-- TODO: Hypoglycemia(Anti-Diabetes) -->
+                      <li>
+                        <!-- Button to open 6th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1mZy-gXAE4DTXY1L-StXz3K1Orwo8Xv4w/preview')">Hypoglycemia(Anti-Diabetes)</button>
+                        
+                      </li>
+                  
+                      <!-- TODO: LOCAL ANAESTHETICS -->
+                      <li>
+                        <!-- Button to open 11th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1uV6SyOlnsISYfoDcVsJa8yBSXGwDvNnr/preview')">LOCAL ANAESTHETICS</button>
+                        
+                      </li>
+                      
+                      <!-- TODO: Malaria -->
+                      <li>
+                        <!-- Button to open 8th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1UxUcu_qjxIaFmeeNpllmbNxaTxO0C6eF/preview')">Malaria</button>
+                        
+                      </li>
+
+                      <!-- TODO: SEDATIVES & HYPNOTICS -->
+                      <li>
+                        <!-- Button to open 7th modal -->
+                        <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1BUgDP59vFoMJB2OleKkB8ql9kuF4LuOo/preview')">SEDATIVES & HYPNOTICS</button>
+                        
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+                    <!-- TODO: BIOCHEMISTRY -->
+              <div id="BIOCHEMISTRY">
+                <div id="card-content-about">
+                  <h2 class="card-header" id="card-header-about">BIOCHEMISTRY</h2>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <div id="para1" class="para">
+                      <ul style="list-style-type: none;">
+                        <!-- TODO: Lipids lecture  -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1P23cLUpSO_hPghZz0OG2oL5ZpBTbHmnm/preview')">Lipids lecture</button>
+                          
+                        </li>
+                        <!-- TODO: Protein lecture  -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1QOjo1ptoPR8DtAN7NkfbG4YyXLE5ASgM/preview')">Protein lecture</button>
+                          
+                        </li>
+                        <!-- TODO: GLUCONEOGENESIS  -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1SM3Rs-mpkEbHXx5Ka-w3IDIj3X_KO7Bk/preview')">GLUCONEOGENESIS</button>
+                          
+                        </li>
+                        <!-- TODO: METABOLIC DISORDERS-I (Carbohydrates) -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1-QXdwNSsSGPgHM8R0D_BlmhD4qCip1XG/preview')">METABOLIC DISORDERS-I (Carbohydrates)</button>
+                          
+                        </li>
+                        <!-- TODO: METABOLIC DISORDERS-II (Lipids) -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1FvJXUiX6Fqk3iAkTxZDXbM-ZbJK8U7UV/preview')">METABOLIC DISORDERS-II (Lipids)</button>
+                          
+                        </li>
+                        <!-- TODO: METABOLIC DISORDERS-III (Protein) -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1jbgduDTzEBhjGzlQcL68Hv3K5FLLorSd/preview')">METABOLIC DISORDERS-III (Protein)</button>
+                          
+                        </li>
+                        <!-- TODO: PATHOLOGY OF BLOOD-I (RBC) -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1Cj9P7OG2LgVz8hbyx5orgUpo-aVlIW00/preview')">PATHOLOGY OF BLOOD-I (RBC)</button>
+                          
+                        </li>
+                        <!-- TODO: PATHOLOGY OF BLOOD-II (WBC) -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1lBfT9xk78Cz9CY5zsLPt74EZKMHDmvfv/preview')">PATHOLOGY OF BLOOD-II (WBC)</button>
+                          
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="HOSPITAL">
+                <div id="card-content-about">
+                  <h2 class="card-header" id="card-header-about">HOSPITAL AND CLINICAL PHARMACY</h2>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <div id="para1" class="para">
+                      <ul style="list-style-type: none;">
+                        <!-- TODO: BIOMEDICAL WASTE MANAGEMENT IN HOSPITALS -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1GXnl8zoYZWQaDsdAyAHnq2NBxKPMQ_ec/preview')">BIOMEDICAL WASTE MANAGEMENT IN HOSPITALS</button>
+                          
+                        </li>
+                        <!-- TODO: BLOOD ELECTROLYTES -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1Y5uDaVtI8Z0vJKc3MtyEuc4xSCF2iQmR/preview')">BLOOD ELECTROLYTES</button>
+                          
+                        </li>
+                        <!-- TODO: COLD CHAIN -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1gLddCPihSEcphB9HqVgLeqy1zXv-Ujo0/preview')">COLD CHAIN</button>
+                          
+                        </li>
+                        <!-- TODO: COMMON SERUM ENZYMES -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1d8R-BEcgxS5BbeR3WkPozNPXty1Uc863/preview')">COMMON SERUM ENZYMES</button>
+                          
+                        </li>
+                        <!-- TODO: DRUG DISTRIBUTION SYSTEM-in hospitals -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1IQIYlfgfKQfFE_StgtyyAn2fpsi-ePut/preview')">DRUG DISTRIBUTION SYSTEM-in hospitals</button>
+                          
+                        </li>
+                        <!-- TODO: DRUG INTERACTIONS -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1jD5T51WPCBMiULCJPlstcgnWptQmGzAE/preview')">DRUG INTERACTIONS</button>
+                          
+                        </li>
+                        <!-- TODO: Formulary Booklet -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1XJOUTQgFNLVcGanJzGcogcvaT_lhf7Eu/preview')">Formulary Booklet</button>
+                          
+                          <!-- TODO: HOSPITAL PHARMACY -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1Ak4iyYCEWoYEyuhnYQsJ7vQbxoW_i2-k/preview')">HOSPITAL PHARMACY</button>
+                          
+                        </li>
+                         <!-- TODO: IV ADMIXTURE SERVICES AND INCOMPATIBILITES -->
+                         <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1IL97PqhzRH3om9v8-83ZccNBXRJPOJmj/preview')">IV ADMIXTURE SERVICES AND INCOMPATIBILITES</button>
+                          
+                        </li>
+                        <!-- TODO: LIVER FUNCTION TEST -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1sX55V_crIk_6UqSO1UZwlcZzptVo-D09/preview')">LIVER FUNCTION TEST</button>
+                          
+                        </li>
+                        <!-- TODO: medication error -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1pJkEwmToQfRVnDuWgRrlISAAWbglnSPs/preview')">medication error</button>
+                          
+                        </li>
+                        <!-- TODO: National Quality Assurance Standards 2020 -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1OBxFE94fzUc3Lbj2cj14JJ5uothU0TXt/preview')">National Quality Assurance Standards 2020</button>
+                          
+                        </li>
+                        <!-- TODO: Pharmacovigilance -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/15WN8kamx9uRia3piARTJuRpnrF8_ms92/preview')">Pharmacovigilance</button>
+                          
+                        </li>
+                        <!-- TODO: Poisoning -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1-vwCyRNt2xV9yS_2oUng3CrIGmVO5tZk/preview')">Poisoning</button>
+                          
+                        </li>
+                        <!-- TODO: RADIOPHARMACEUTICALS -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1hK95So3Mlv3gl1vQnwF_Na7g5x1B4xMb/preview')">RADIOPHARMACEUTICALS</button>
+                          
+                        </li>
+                        <!-- TODO: RENAL FUNCTION TEST -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1hedPtAFLebIAUinfMCBe7YL26OU16SZw/preview')">RENAL FUNCTION TEST</button>
+                          
+                        </li>
+                        <!-- TODO:Schedule h vs h1 drugs -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1VyP3eLdVhvJ-WjV4wY7KDz22eZY-fnU8/preview')">Schedule h vs h1 drugs</button>
+                          
+                        </li>
+                        <!-- TODO: THERAPEUTIC DRUG MONITORING -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1jUdXn75naD7x0lzS3cr_tn0vBPmq_se1/preview')">THERAPEUTIC DRUG MONITORING</button>
+                          
+                        </li>
+                        <!-- TODO: TENDERING PROCESS -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1-GM8rc0uroMQowEA5y7b1P2JI3lzDlfE/preview')">TENDERING PROCESS</button>
+                          
+                        </li>
+                        <!-- TODO: Total Parenteral Nutrition -->
+                        <li>
+                          <!-- Button to open sixth modal -->
+                          <button class="modalbtn" onclick="window.open('https://drive.google.com/file/d/1iATfujQm_-3530Qj8gaGZG_OBclqKjZy/preview')">Total Parenteral Nutrition</button>
+                          
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

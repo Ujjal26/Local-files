@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .slider {
+      position: relative;
+      width: 300px;
+      height: 50px;
+      overflow: hidden;
+    }
+
+    .text {
+      position: absolute;
+      white-space: nowrap;
+      animation: slide 6s infinite;
+      font-size: 20px;
+    }
+
+    @keyframes slide {
+      0% {
+        left: -100%;
+        opacity: 0;
+      }
+      10% {
+        left: 0;
+        opacity: 1;
+      }
+      40% {
+        left: 0;
+        opacity: 1;
+      }
+      50% {
+        left: 100%;
+        opacity: 0;
+      }
+      60% {
+        left: -100%;
+        opacity: 0;
+      }
+      70% {
+        left: 0;
+        opacity: 1;
+      }
+      100% {
+        left: 0;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="text">HAPPY BIRTHDAY DARLING ❤️ </div>
+  </div>
+</body>
+</html>
