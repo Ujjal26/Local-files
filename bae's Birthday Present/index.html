@@ -1,33 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday My Love</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .heart {
+      font-size: 4em;
+      animation: pulse 1.5s infinite;
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      margin-top: 20px;
+      border: 5px solid white;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .message {
+      margin-top: 40px;
+      font-size: 1.2em;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 3s ease-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="image-container fade-in">
-        <img src="me and bae.jpg" alt="Description of image">
+  <div class="container">
+    <div class="heart">❤️</div>
+    <h1>Happy Birthday, My Love! 🎂</h1>
+    <img src="bae.jpg" alt="Your Photo" />
+    <div class="message">
+      <p>Today is all about you. 💖</p>
+      <p>I feel so lucky to have you in my life. You're my sunshine, my heart, and my everything.</p>
+      <p>May this birthday be as beautiful, bright, and special as you are. Love you always. 💕</p>
     </div>
+  </div>
 
-    <!-- <div id="image-container1">
-        <img src="me & bae.jpg" alt="Description of image">
-    </div> -->
-    <div>
-        <img src="1ST date.jpg" class="image-frame slide-on-scroll float-start" alt="...">
-        <img src="me & bae.jpg" class="image-frame slide-on-scroll rounded float-end" alt="...">
-    </div>
-    <div class="heart"></div>
-    <div class="slider">
-        <div class="text">HAPPY BIRTHDAY DARLING ❤️ </div>
-      </div>
-    <script src="script.js"></script>
+  <!-- Simple Confetti -->
+  <canvas class="confetti"></canvas>
+
+  <script>
+    // Basic confetti
+    const canvas = document.querySelector('.confetti');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const confettiPieces = Array.from({ length: 150 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      r: Math.random() * 6 + 4,
+      d: Math.random() * 10 + 10,
+      color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+      tilt: Math.random() * 10 - 10
+    }));
+
+    function drawConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of confettiPieces) {
+        ctx.beginPath();
+        ctx.fillStyle = p.color;
+        ctx.ellipse(p.x, p.y, p.r, p.r / 2, p.tilt, 0, 2 * Math.PI);
+        ctx.fill();
+        p.y += p.d * 0.1;
+        if (p.y > canvas.height) {
+          p.y = -10;
+          p.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(drawConfetti);
+    }
+    drawConfetti();
+  </script>
 </body>
 </html>
